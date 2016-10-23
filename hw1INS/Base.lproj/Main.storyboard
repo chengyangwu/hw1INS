@@ -31,7 +31,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="cheung_chi_lam" id="Kn2-ES-8V1">
                         <barButtonItem key="backBarButtonItem" title=" " id="ZXs-rP-M6q"/>
-                        <barButtonItem key="leftBarButtonItem" image="previous" id="6gY-PF-H2A"/>
+                        <barButtonItem key="leftBarButtonItem" title=" " id="6gY-PF-H2A"/>
                         <barButtonItem key="rightBarButtonItem" title="..." id="mF5-XL-PaK">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="Juo-eG-BVI"/>
@@ -156,7 +156,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fo-pq-Q32">
-                                <frame key="frameInset" height="44"/>
+                                <frame key="frameInset" minX="-1" height="44" maxX="3"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="cheung_chi_lam" id="qOL-I5-SrX">
@@ -213,11 +213,11 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBf-19-r1K">
-                                <frame key="frameInset" height="49" maxY="-1"/>
+                                <frame key="frameInset" minX="-1" height="48" maxX="3" maxY="2"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem image="home" id="3u9-pg-p2P"/>
+                                    <tabBarItem title="" image="home" id="3u9-pg-p2P"/>
                                     <tabBarItem image="search" id="f8q-Y9-gy3"/>
                                     <tabBarItem image="camera" id="Juy-y9-jad"/>
                                     <tabBarItem image="heart" id="8OO-HX-dDl"/>
@@ -233,27 +233,38 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ps1-or-QRz">
-                                <frame key="frameInset" height="49" maxY="497"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem image="list" id="bxE-92-qxs"/>
-                                    <tabBarItem image="chart" id="r4B-uS-WrN"/>
-                                    <tabBarItem image="location" id="L3H-TJ-LxK"/>
-                                    <tabBarItem image="profile" id="bJn-Fm-t28"/>
-                                </items>
-                            </tabBar>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="QVV-6Y-1dL">
                                 <frame key="frameInset" minX="117" minY="164" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t4v-8O-Xrx">
+                                <frame key="frameInset" height="44" maxY="497"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="list" id="3yA-gp-gnl"/>
+                                    <barButtonItem image="chart" id="cii-5q-kAU">
+                                        <inset key="imageInsets" minX="120" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <color key="tintColor" red="0.76464909315109253" green="0.76473909616470337" blue="0.76460772752761841" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem image="location" id="Uov-ai-pPs">
+                                        <inset key="imageInsets" minX="240" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <color key="tintColor" red="0.76464909319999996" green="0.76473909620000002" blue="0.76460772749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem image="profile" id="0C9-e4-5cf">
+                                        <inset key="imageInsets" minX="360" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <color key="tintColor" red="0.76464909319999996" green="0.76473909620000002" blue="0.76460772749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="cheung_chi_lam" id="viy-n0-KqY">
                         <barButtonItem key="backBarButtonItem" id="rah-cz-cUc">
                             <string key="title" base64-UTF8="YES">
+CCA
+</string>
+                            <string key="userLabel" base64-UTF8="YES">
 CA
 </string>
                         </barButtonItem>
@@ -287,7 +298,6 @@ CA
         <image name="photo_10" width="294" height="294"/>
         <image name="photo_11" width="292" height="294"/>
         <image name="photo_12" width="293" height="293"/>
-        <image name="previous" width="32" height="32"/>
         <image name="profile" width="40" height="40"/>
         <image name="search" width="40" height="40"/>
     </resources>
