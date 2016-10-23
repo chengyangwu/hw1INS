@@ -124,6 +124,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
+                                        <color key="value" red="0.11789248138666153" green="0.53115803003311157" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="張智霖" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7B-g1-Or8">
@@ -145,6 +148,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
+                                        <color key="value" red="0.19186949729919434" green="0.57053744792938232" blue="0.99986356496810913" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
@@ -212,18 +218,6 @@
                                 <frame key="frameInset" minX="278" minY="656" width="138" height="138"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBf-19-r1K">
-                                <frame key="frameInset" minX="-1" height="48" maxX="3" maxY="2"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="" image="home" id="3u9-pg-p2P"/>
-                                    <tabBarItem image="search" id="f8q-Y9-gy3"/>
-                                    <tabBarItem image="camera" id="Juy-y9-jad"/>
-                                    <tabBarItem image="heart" id="8OO-HX-dDl"/>
-                                    <tabBarItem image="info" id="jtE-1j-kGp"/>
-                                </items>
-                            </tabBar>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Main" translatesAutoresizingMaskIntoConstraints="NO" id="UFV-HN-DUC">
                                 <frame key="frameInset" minX="14" minY="75" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -237,25 +231,45 @@
                                 <frame key="frameInset" minX="117" minY="164" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t4v-8O-Xrx">
-                                <frame key="frameInset" height="44" maxY="497"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qtp-yN-6a3">
+                                <frame key="frameInset" minY="197" width="414" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcZ-E4-eyG">
+                                        <frame key="frameInset" minX="35" minY="-5" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="list"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mi-UR-Tdb">
+                                        <frame key="frameInset" minX="235" minY="-5" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="location"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxt-4g-OKC">
+                                        <frame key="frameInset" minX="335" minY="-5" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="profile"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyn-Im-1sW">
+                                        <frame key="frameInset" minX="135" minY="-5" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="chart"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBf-19-r1K">
+                                <frame key="frameInset" height="48"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <barButtonItem image="list" id="3yA-gp-gnl"/>
-                                    <barButtonItem image="chart" id="cii-5q-kAU">
-                                        <inset key="imageInsets" minX="120" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <color key="tintColor" red="0.76464909315109253" green="0.76473909616470337" blue="0.76460772752761841" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </barButtonItem>
-                                    <barButtonItem image="location" id="Uov-ai-pPs">
-                                        <inset key="imageInsets" minX="240" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <color key="tintColor" red="0.76464909319999996" green="0.76473909620000002" blue="0.76460772749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </barButtonItem>
-                                    <barButtonItem image="profile" id="0C9-e4-5cf">
-                                        <inset key="imageInsets" minX="360" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <color key="tintColor" red="0.76464909319999996" green="0.76473909620000002" blue="0.76460772749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </barButtonItem>
+                                    <tabBarItem title="" image="home" id="3u9-pg-p2P"/>
+                                    <tabBarItem image="search" id="f8q-Y9-gy3"/>
+                                    <tabBarItem image="camera" id="Juy-y9-jad"/>
+                                    <tabBarItem image="heart" id="8OO-HX-dDl"/>
+                                    <tabBarItem image="info" id="jtE-1j-kGp"/>
                                 </items>
-                            </toolbar>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>

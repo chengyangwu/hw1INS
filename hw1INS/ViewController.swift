@@ -8,8 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+extension CALayer {
+    var borderColorFromUIColor: UIColor {
+        get {
+            return UIColor(cgColor: self.borderColor!)
+        } set {
+            self.borderColor = newValue.cgColor
+        }
+    }
+}
 
+class ViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
